@@ -1,7 +1,8 @@
 // Sample CPP file
 // Libraries
-#include "sample.h"
 #include <SPI.h>
+// Modules
+#include "sample.h"
 
 // Code
 void helloWorld()

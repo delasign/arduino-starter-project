@@ -41,8 +41,9 @@
   6. Upload Sketch.
 */
 
-// Script
+// Libraries
 #include <SPI.h>
+// Modules
 #include "sample.h"
 
 void setup(void)
