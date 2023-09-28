@@ -45,13 +45,24 @@
 #include <SPI.h>
 // Modules
 #include "sample.h"
+#include "Logs.h"
+// MARK: Variables
+String debugIdentifier = "[MAIN] |";
 
 void setup(void)
 {
   // Set the data rate in bits per second (baud) for serial data transmission.
   Serial.begin(9600);
+  // Wait till the serial is avaialble before continuing, to make sure that the Logs appear.
+  while (!Serial) yield();
   // Log the initial setup.
-  Serial.println("--- SETUP ---");
+  inProgressLog(debugIdentifier, "Setup");
+  // Setup your Project
+  // .
+  // ..
+  // ...
+  // Log the end of the setup
+  succesfullLog(debugIdentifier, "Setup", "Complete");
 }
 
 void loop()
