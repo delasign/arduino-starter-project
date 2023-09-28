@@ -11,3 +11,7 @@
 
 1. <a href="https://delasign.com/blog/arduino-log-system/?utm=arduino-starter-project">Arduino Logging System 🔗</a>
 2. <a href="https://delasign.com/blog/arduino-wait-for-serial/?utm=arduino-starter-project">How tell Arduino to wait for Serial to be available before continuing 🔗</a>
+
+## JSON
+
+1. <a href="https://delasign.com/blog/arduino-json/?utm=arduino-starter-project">How to work with JSON in an Arduino project 🔗</a>
