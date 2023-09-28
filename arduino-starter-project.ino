@@ -44,15 +44,20 @@
 // Libraries
 #include <SPI.h>
 // Modules
+#include "SampleManager.h"
 #include "sample.h"
 #include "Logs.h"
+#include "Constants.h"
 // MARK: Variables
 /// Identifier
 String debugIdentifier = "[MAIN] |";
 /// Wait for Serial
 unsigned long startTime = millis();
 unsigned long maximumWaitTimeInMs = 5000;
+// Managers
+SampleManager sampleManager;
 
+// MARK: Lifecycle
 void setup(void)
 {
   // Set the data rate in bits per second (baud) for serial data transmission.
@@ -66,10 +71,13 @@ void setup(void)
   }
   // Log the initial setup.
   inProgressLog(debugIdentifier, "Setup");
+  String constant = "Here is the Constant : " + String(SAMPLE_CONSTANT); 
+  succesfullLog(debugIdentifier, "Setup", constant);
   // Setup your Project
   // .
   // ..
   // ...
+  sampleManager.setup();
   // Log the end of the setup
   succesfullLog(debugIdentifier, "Setup", "Complete");
 }
