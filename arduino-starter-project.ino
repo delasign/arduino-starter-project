@@ -45,6 +45,9 @@
 #include <SPI.h>
 // Modules
 #include "SampleManager.h"
+#include "JSONManager.h"
+#include "Models.h"
+#include "Utilities.h"
 #include "sample.h"
 #include "Logs.h"
 #include "Constants.h"
@@ -70,20 +73,44 @@ void setup(void)
   // Log the initial setup.
   inProgressLog(debugIdentifier, "Setup");
   String constant = "Here is the Constant : " + String(SAMPLE_CONSTANT); 
-  succesfullLog(debugIdentifier, "Setup", constant);
+  succesfulLog(debugIdentifier, "Setup", constant);
   // Setup your Project
   // .
   // ..
   // ...
   SampleManager::shared().setup();
+  testJSONFunctionality();
   // Log the end of the setup
-  succesfullLog(debugIdentifier, "Setup", "Complete");
+  succesfulLog(debugIdentifier, "Setup", "Complete");
 }
 
 void loop()
 {
   // Hello World in the loop.
-  helloWorld();
+  // helloWorld();
 }
+
+void testJSONFunctionality() {
+  inProgressLog(debugIdentifier, "testJSONFunctionality");
+  SampleJSONObject object;
+  object.sampleString = stringToCharArray("Hello World");
+  object.sampleInt = 10;
+  object.sampleBool = false;
+
+  DynamicJsonDocument doc = JSONManager::shared().convertSampleJSONObjectToDoc(object);
+
+  String jsonString = JSONManager::shared().convertDocToString(doc);
+  succesfulLog(debugIdentifier, "testJSONFunctionality", jsonString);
+
+  inProgressLog(debugIdentifier, "testJSONFunctionality", "Converting back...");
+
+  DynamicJsonDocument docFromString = JSONManager::shared().convertStringToDoc(stringToCharArray(jsonString));
+  SampleJSONObject objectFromString = JSONManager::shared().convertDocToSampleJSONObject(docFromString);
+  
+  succesfulLog(debugIdentifier, "testJSONFunctionality", "Converted to object - here's the string : " + objectFromString.sampleString);
+  succesfulLog(debugIdentifier, "testJSONFunctionality", "Complete");
+}
+
+
 
 

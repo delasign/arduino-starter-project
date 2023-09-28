@@ -13,7 +13,7 @@ void inProgressLog(String identifier, String function, String process) {
   Serial.println( identifier + "⚈ ⚈ ⚈ " +  function + " | " + process + ". ⚈ ⚈ ⚈");
 };
 
-void succesfullLog(String identifier, String function, String msg) {
+void succesfulLog(String identifier, String function, String msg) {
   Serial.println( identifier + "✅ " +  function + " | " + msg + ".");
 };
 

@@ -9,5 +9,5 @@
 void helloWorld()
 {
     // Hello World in the loop.
-    succesfullLog(sampleDebugIdentifier, "helloWorld", "Hello World!");
+    succesfulLog(sampleDebugIdentifier, "helloWorld", "Hello World!");
 }

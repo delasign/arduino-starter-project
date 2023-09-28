@@ -27,5 +27,5 @@ void SampleManager::setup() {
   // ..
   // ...
   // Log the end of the setup
-  succesfullLog(debugIdentifier, "Setup", "Complete");
+  succesfulLog(debugIdentifier, "Setup", "Complete");
 }

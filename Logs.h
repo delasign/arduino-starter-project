@@ -6,6 +6,6 @@
 // MARK: Functions
 void inProgressLog(String identifier, String msg);
 void inProgressLog(String identifier, String function, String process);
-void succesfullLog(String identifier, String function, String msg);
+void succesfulLog(String identifier, String function, String msg);
 void failedLog(String identifier, String function, String msg);
 #endif
