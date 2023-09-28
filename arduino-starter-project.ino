@@ -54,8 +54,6 @@ String debugIdentifier = "[MAIN] |";
 /// Wait for Serial
 unsigned long startTime = millis();
 unsigned long maximumWaitTimeInMs = 5000;
-// Managers
-SampleManager sampleManager;
 
 // MARK: Lifecycle
 void setup(void)
@@ -77,7 +75,7 @@ void setup(void)
   // .
   // ..
   // ...
-  sampleManager.setup();
+  SampleManager::shared().setup();
   // Log the end of the setup
   succesfullLog(debugIdentifier, "Setup", "Complete");
 }

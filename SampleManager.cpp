@@ -5,6 +5,20 @@
 #include "Logs.h"
 // MARK: Variables
 
+
+// MARK: Constructor
+SampleManager::SampleManager() {
+  // Initialization code, if needed
+}
+
+// MARK: Singleton
+// === Required for Singletons ===
+// Define the single instance as a static member
+SampleManager& SampleManager::shared() {
+  static SampleManager instance;
+  return instance;
+}
+
 // MARK: LifeCycle
 void SampleManager::setup() {
   inProgressLog(debugIdentifier, "Setup");
