@@ -47,14 +47,23 @@
 #include "sample.h"
 #include "Logs.h"
 // MARK: Variables
+/// Identifier
 String debugIdentifier = "[MAIN] |";
+/// Wait for Serial
+unsigned long startTime = millis();
+unsigned long maximumWaitTimeInMs = 5000;
 
 void setup(void)
 {
   // Set the data rate in bits per second (baud) for serial data transmission.
   Serial.begin(9600);
-  // Wait till the serial is avaialble before continuing, to make sure that the Logs appear.
-  while (!Serial) yield();
+  // Wait till the serial is available before continuing, to make sure that the Logs appear.
+  // Wait for serial connection to be established, with a timeout
+  unsigned long startTime = millis();
+  while (!Serial && millis() - startTime < maximumWaitTimeInMs) {
+    // Wait for up to 5 seconds for a serial connection
+    // Adjust the timeout value (5000 milliseconds in this case) as needed
+  }
   // Log the initial setup.
   inProgressLog(debugIdentifier, "Setup");
   // Setup your Project
@@ -70,3 +79,5 @@ void loop()
   // Hello World in the loop.
   helloWorld();
 }
+
+
