@@ -15,3 +15,9 @@
 ## JSON
 
 1. <a href="https://delasign.com/blog/arduino-json/?utm=arduino-starter-project">How to work with JSON in an Arduino project 🔗</a>
+
+## Adafruit nRF52 Bluefruit LE
+
+1. <a href="https://delasign.com/blog/bluefruit-nrf52-null-character-uart-message/?utm=arduino-starter-project">How to send a Bluefruit UART message that ends with a null character 🔗</a>
+2. <a href="https://delasign.com/blog/bluefruit-nrf52-no-null-character-uart-message/?utm=arduino-starter-project">How to send a Bluefruit UART message without a null character 🔗</a>
+3. <a href="https://delasign.com/blog/arduino-bluefruit-nrf52-mtu/?utm=arduino-starter-project">How to change the MTU of a nRF52 Bluefruit LE in Arduino 🔗</a>
