@@ -14,11 +14,11 @@ public:
   // MARK: Lifecycle
   void setup();
   // MARK: Conversion Functionality
-  String convertDocToString(DynamicJsonDocument object);
-  DynamicJsonDocument convertStringToDoc(String jsonString);
+  String convertDocToString(JsonDocument object);
+  JsonDocument convertStringToDoc(String jsonString);
   // MARK: Utilities
-  DynamicJsonDocument convertSampleJSONObjectToDoc(SampleJSONObject object);
-  SampleJSONObject convertDocToSampleJSONObject(DynamicJsonDocument doc);
+  JsonDocument convertSampleJSONObjectToDoc(SampleJSONObject object);
+  SampleJSONObject convertDocToSampleJSONObject(JsonDocument doc);
   
 private:
   // MARK: Variables

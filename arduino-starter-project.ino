@@ -97,14 +97,14 @@ void testJSONFunctionality() {
   object.sampleInt = 10;
   object.sampleBool = false;
 
-  DynamicJsonDocument doc = JSONManager::shared().convertSampleJSONObjectToDoc(object);
+  JsonDocument doc = JSONManager::shared().convertSampleJSONObjectToDoc(object);
 
   String jsonString = JSONManager::shared().convertDocToString(doc);
   succesfulLog(debugIdentifier, "testJSONFunctionality", jsonString);
 
   inProgressLog(debugIdentifier, "testJSONFunctionality", "Converting back...");
 
-  DynamicJsonDocument docFromString = JSONManager::shared().convertStringToDoc(stringToCharArray(jsonString));
+  JsonDocument docFromString = JSONManager::shared().convertStringToDoc(stringToCharArray(jsonString));
   SampleJSONObject objectFromString = JSONManager::shared().convertDocToSampleJSONObject(docFromString);
   
   succesfulLog(debugIdentifier, "testJSONFunctionality", "Converted to object - here's the string : " + objectFromString.sampleString);

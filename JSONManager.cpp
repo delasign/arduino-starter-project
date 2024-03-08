@@ -32,7 +32,7 @@ void JSONManager::setup() {
 }
 
 // MARK: Conversion Functionality
-String JSONManager::convertDocToString(DynamicJsonDocument object) {
+String JSONManager::convertDocToString(JsonDocument object) {
   inProgressLog(debugIdentifier, "convertSampleStructToJSONString");
   // Convert the JSON document to a string
   String jsonString;
@@ -42,15 +42,15 @@ String JSONManager::convertDocToString(DynamicJsonDocument object) {
   return jsonString;
 }
 
-DynamicJsonDocument JSONManager::convertStringToDoc(String jsonString) {
+JsonDocument JSONManager::convertStringToDoc(String jsonString) {
   inProgressLog(debugIdentifier, "convertSampleStructToJSONString");
-  DynamicJsonDocument doc(1024);
+  JsonDocument doc;
   DeserializationError error = deserializeJson(doc, jsonString);
   // Check for parsing errors
   if (error) {
     Serial.print("Parsing failed: ");
     Serial.println(error.c_str());
-    DynamicJsonDocument empty(1024);
+    JsonDocument empty;
     return empty;
   }
   succesfulLog(debugIdentifier, "convertSampleStructToJSONString", "Complete");
@@ -58,15 +58,15 @@ DynamicJsonDocument JSONManager::convertStringToDoc(String jsonString) {
 }
 
 // MARK: Utilities
-DynamicJsonDocument JSONManager::convertSampleJSONObjectToDoc(SampleJSONObject object) {
-  DynamicJsonDocument doc(1024);
+JsonDocument JSONManager::convertSampleJSONObjectToDoc(SampleJSONObject object) {
+  JsonDocument doc;
   doc["sampleString"] = object.sampleString;
   doc["sampleInt"] = object.sampleInt;
   doc["sampleBool"] = object.sampleBool;
   return doc;
 }
 
-SampleJSONObject JSONManager::convertDocToSampleJSONObject(DynamicJsonDocument doc) {
+SampleJSONObject JSONManager::convertDocToSampleJSONObject(JsonDocument doc) {
   inProgressLog(debugIdentifier, "convertSampleStructToJSONString");
   SampleJSONObject object;
   object.sampleString = doc["sampleString"].as<String>();
