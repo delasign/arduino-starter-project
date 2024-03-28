@@ -82,8 +82,15 @@ void setup(void)
 
 void loop()
 {
-  // Hello World in the loop.
-  helloWorld();
+  // Print the Enum
+  Serial.print("Enum Value 1: ");
+  Serial.println(Sample::Value_1);
+  Serial.print("Enum Value 2: ");
+  Serial.println(Value_2);
+  Serial.print("DifferentEnum Value 1: ");
+  Serial.println(EnumTwo::DifferentEnum::Value_1);
+  Serial.print("DifferentEnum Value 2: ");
+  Serial.println(EnumTwo::Value_2);
 }
 
 
