@@ -23,6 +23,12 @@
 2. <a href="https://delasign.com/blog/bluefruit-nrf52-no-null-character-uart-message/?utm=arduino-starter-project">How to send a Bluefruit UART message without a null character 🔗</a>
 3. <a href="https://delasign.com/blog/arduino-bluefruit-nrf52-mtu/?utm=arduino-starter-project">How to change the MTU of a nRF52 Bluefruit LE in Arduino 🔗</a>
 
+## Filters
+
+1. <a href="https://delasign.com/blog/how-to-create-a-low-pass-filter-in-arduino//?utm=arduino-starter-project">How to create a Low-Pass Filter in Arduino 🔗</a>
+2. <a href="https://delasign.com/blog/how-to-create-a-high-pass-filter-in-arduino//?utm=arduino-starter-project">How to create a High-Pass Filter in Arduino 🔗</a>
+3. <a href="https://delasign.com/blog/how-to-clamp-or-limit-values-in-arduino//?utm=arduino-starter-project">How to Clamp or Limit Values in a signal in Arduino 🔗</a>
+
 
 ## Errors
 1. <a href="https://www.delasign.com/blog/how-to-fix-enum-name-conflicts-with-previous-declaration-in-arduino/?utm=arduino-starter-project">How to fix enum name "conflicts with previous declaration" in Arduino 🔗</a>
